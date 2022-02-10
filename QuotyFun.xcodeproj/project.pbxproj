@@ -11,6 +11,10 @@
 		66A5818527B3CEEB00E3C951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5818427B3CEEB00E3C951 /* ContentView.swift */; };
 		66A5818727B3CEF100E3C951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A5818627B3CEF100E3C951 /* Assets.xcassets */; };
 		66A5818A27B3CEF100E3C951 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A5818927B3CEF100E3C951 /* Preview Assets.xcassets */; };
+		66A5819527B3F33F00E3C951 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819427B3F33F00E3C951 /* HomeView.swift */; };
+		66A5819727B3F41100E3C951 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819627B3F41100E3C951 /* LoginView.swift */; };
+		66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819827B40BBD00E3C951 /* SignUpView.swift */; };
+		66A5819B27B4222100E3C951 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819A27B4222100E3C951 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		66A5818427B3CEEB00E3C951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66A5818627B3CEF100E3C951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66A5818927B3CEF100E3C951 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66A5819427B3F33F00E3C951 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		66A5819627B3F41100E3C951 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		66A5819827B40BBD00E3C951 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		66A5819A27B4222100E3C951 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		66A5818127B3CEEB00E3C951 /* QuotyFun */ = {
 			isa = PBXGroup;
 			children = (
+				66A5819327B3DCB100E3C951 /* Utils */,
+				66A5819227B3DCA800E3C951 /* ViewModel */,
+				66A5819127B3DCA200E3C951 /* Model */,
+				66A5819027B3DC9700E3C951 /* View */,
 				66A5818227B3CEEB00E3C951 /* QuotyFunApp.swift */,
-				66A5818427B3CEEB00E3C951 /* ContentView.swift */,
 				66A5818627B3CEF100E3C951 /* Assets.xcassets */,
 				66A5818827B3CEF100E3C951 /* Preview Content */,
 			);
@@ -65,6 +76,39 @@
 				66A5818927B3CEF100E3C951 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		66A5819027B3DC9700E3C951 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66A5818427B3CEEB00E3C951 /* ContentView.swift */,
+				66A5819427B3F33F00E3C951 /* HomeView.swift */,
+				66A5819627B3F41100E3C951 /* LoginView.swift */,
+				66A5819827B40BBD00E3C951 /* SignUpView.swift */,
+				66A5819A27B4222100E3C951 /* ErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66A5819127B3DCA200E3C951 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66A5819227B3DCA800E3C951 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66A5819327B3DCB100E3C951 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A5819527B3F33F00E3C951 /* HomeView.swift in Sources */,
+				66A5819B27B4222100E3C951 /* ErrorView.swift in Sources */,
+				66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */,
 				66A5818527B3CEEB00E3C951 /* ContentView.swift in Sources */,
+				66A5819727B3F41100E3C951 /* LoginView.swift in Sources */,
 				66A5818327B3CEEB00E3C951 /* QuotyFunApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

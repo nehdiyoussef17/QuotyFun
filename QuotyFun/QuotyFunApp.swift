@@ -11,7 +11,7 @@ import SwiftUI
 struct QuotyFunApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
