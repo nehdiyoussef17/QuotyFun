@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 
 
@@ -43,6 +44,7 @@ struct LoginView : View {
                         .foregroundColor(self.color)
                         .padding(.top, 35)
                     TextField("Email", text: self.$email)
+                        .autocapitalization(.none)
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color("Color"): self.color,lineWidth: 2))
                         .padding(.top, 25)
@@ -51,9 +53,13 @@ struct LoginView : View {
                     HStack(spacing: 15){
                         if self.visible{
                             TextField("Password",text: self.$pass)
+                                .autocapitalization(.none)
+
                         }
                         else{
                             SecureField("Password",text: self.$pass)
+                                .autocapitalization(.none)
+
                         }
                         
                         Button(action: {
@@ -81,7 +87,7 @@ struct LoginView : View {
                     
                     HStack{
                         Button(action: {
-                            
+                            self.reset()
                         }) {
                             Text("Forget Password")
                                 .fontWeight(.bold)
@@ -114,11 +120,16 @@ struct LoginView : View {
             Auth.auth().signIn(withEmail: self.email, password: self.pass) { (res,err) in
                 if err != nil{
                     self.error = err!.localizedDescription
+                    self.type = "Error🛑"
                     self.alert.toggle()
+                    self.couleur = "a7mer"
+                    return
                 }
                 else{
+                UserDefaults.standard.set(true, forKey: "status")
+                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                 self.error = "Welcome"
-                self.type = "Success"
+                self.type = "Success✅"
                 self.alert.toggle()
                 self.couleur = "a5dher"
                     
@@ -131,12 +142,50 @@ struct LoginView : View {
         }
         else {
             self.error = "Please fill all fields properly"
-            self.type = "Error"
+            self.type = "Error🛑"
             self.alert.toggle()
             self.couleur = "a7mer"
         }
     }
+    
+    
+    
+
+    func reset(){
+        
+        
+        if self.email != "" {
+            Auth.auth().sendPasswordReset(withEmail: self.email) {
+                (err) in
+                if err != nil{
+                    self.error = err!.localizedDescription
+                    self.type = "Error🛑"
+                    self.alert.toggle()
+                    self.couleur = "a7mer"
+                    return
+                }
+                else{
+                self.error = "Reset Email sent seccessfully "
+                self.type = "Success✅"
+                self.alert.toggle()
+                self.couleur = "a5dher"
+                    
+                }
+            }
+        }
+        else{
+            self.error = ("Email id is empty")
+            self.type = "Error🛑"
+            self.alert.toggle()
+            self.couleur = "a7mer"
+        }
+    }
+    
+    
+    
 }
+
+
 
 
 

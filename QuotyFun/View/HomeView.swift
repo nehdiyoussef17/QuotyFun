@@ -13,18 +13,33 @@ import SwiftUI
 
 struct HomeView : View {
     @State var show = false
+    @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     var body: some View{
         NavigationView{
-            ZStack{
-                NavigationLink( destination: SignUpView(show: self.$show), isActive: self.$show){
-                    Text("")
+            VStack{
+                
+                if self.status{
+                    ContentView()
                 }
-                .hidden()
-                LoginView(show: $show) 
+                else{
+                    ZStack{
+                        NavigationLink( destination: SignUpView(show: self.$show), isActive: self.$show){
+                            Text("")
+                        }
+                        .hidden()
+                        LoginView(show: $show)
+                    }
+                }
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
+            .onAppear{
+                NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main){
+                    (_) in
+                    self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+                }
+            }
         }
     }
 }
