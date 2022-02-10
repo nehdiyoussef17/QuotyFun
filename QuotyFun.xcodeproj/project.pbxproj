@@ -14,10 +14,13 @@
 		66A5819527B3F33F00E3C951 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819427B3F33F00E3C951 /* HomeView.swift */; };
 		66A5819727B3F41100E3C951 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819627B3F41100E3C951 /* LoginView.swift */; };
 		66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819827B40BBD00E3C951 /* SignUpView.swift */; };
-		66A5819B27B4222100E3C951 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819A27B4222100E3C951 /* ErrorView.swift */; };
+		66A5819B27B4222100E3C951 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819A27B4222100E3C951 /* AlertView.swift */; };
+		73BD09B827DDB32520977893 /* Pods_QuotyFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B55E69520F978E132CF9A0C /* Pods_QuotyFun.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A4F7F1B9006AED93AD8C2E /* Pods-QuotyFun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuotyFun.debug.xcconfig"; path = "Target Support Files/Pods-QuotyFun/Pods-QuotyFun.debug.xcconfig"; sourceTree = "<group>"; };
+		3E7B4CE35AD46B6BE6FC0317 /* Pods-QuotyFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuotyFun.release.xcconfig"; path = "Target Support Files/Pods-QuotyFun/Pods-QuotyFun.release.xcconfig"; sourceTree = "<group>"; };
 		66A5817F27B3CEEB00E3C951 /* QuotyFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotyFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A5818227B3CEEB00E3C951 /* QuotyFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotyFunApp.swift; sourceTree = "<group>"; };
 		66A5818427B3CEEB00E3C951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,7 +29,8 @@
 		66A5819427B3F33F00E3C951 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		66A5819627B3F41100E3C951 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66A5819827B40BBD00E3C951 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		66A5819A27B4222100E3C951 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		66A5819A27B4222100E3C951 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		6B55E69520F978E132CF9A0C /* Pods_QuotyFun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuotyFun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BD09B827DDB32520977893 /* Pods_QuotyFun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E62E3257C8A7C3AC1736DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B55E69520F978E132CF9A0C /* Pods_QuotyFun.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66A5817627B3CEEB00E3C951 = {
 			isa = PBXGroup;
 			children = (
 				66A5818127B3CEEB00E3C951 /* QuotyFun */,
 				66A5818027B3CEEB00E3C951 /* Products */,
+				CC1523C94FBC29327184C802 /* Pods */,
+				1E62E3257C8A7C3AC1736DB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +100,7 @@
 				66A5819427B3F33F00E3C951 /* HomeView.swift */,
 				66A5819627B3F41100E3C951 /* LoginView.swift */,
 				66A5819827B40BBD00E3C951 /* SignUpView.swift */,
-				66A5819A27B4222100E3C951 /* ErrorView.swift */,
+				66A5819A27B4222100E3C951 /* AlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +126,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CC1523C94FBC29327184C802 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F7F1B9006AED93AD8C2E /* Pods-QuotyFun.debug.xcconfig */,
+				3E7B4CE35AD46B6BE6FC0317 /* Pods-QuotyFun.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66A5818D27B3CEF100E3C951 /* Build configuration list for PBXNativeTarget "QuotyFun" */;
 			buildPhases = (
+				B6977C42A4B2CB316606731D /* [CP] Check Pods Manifest.lock */,
 				66A5817B27B3CEEB00E3C951 /* Sources */,
 				66A5817C27B3CEEB00E3C951 /* Frameworks */,
 				66A5817D27B3CEEB00E3C951 /* Resources */,
+				B82EC7810BDC720ECEB2276B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,13 +202,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B6977C42A4B2CB316606731D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuotyFun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B82EC7810BDC720ECEB2276B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuotyFun/Pods-QuotyFun-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuotyFun/Pods-QuotyFun-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuotyFun/Pods-QuotyFun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		66A5817B27B3CEEB00E3C951 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				66A5819527B3F33F00E3C951 /* HomeView.swift in Sources */,
-				66A5819B27B4222100E3C951 /* ErrorView.swift in Sources */,
+				66A5819B27B4222100E3C951 /* AlertView.swift in Sources */,
 				66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */,
 				66A5818527B3CEEB00E3C951 /* ContentView.swift in Sources */,
 				66A5819727B3F41100E3C951 /* LoginView.swift in Sources */,
@@ -311,6 +379,7 @@
 		};
 		66A5818E27B3CEF100E3C951 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A4F7F1B9006AED93AD8C2E /* Pods-QuotyFun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +409,7 @@
 		};
 		66A5818F27B3CEF100E3C951 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E7B4CE35AD46B6BE6FC0317 /* Pods-QuotyFun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

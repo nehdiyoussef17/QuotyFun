@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct ErrorView: View {
+struct AlertView: View {
     @State var color = Color.black.opacity(0.7)
     @Binding var alert : Bool
     @Binding var error : String
+    @Binding var type : String
+    @Binding var couleur : String
     
     var body: some View {
         GeometryReader{_ in
             VStack{
                 HStack{
-                    Text("Error")
+                    Text(type)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(self.color)
@@ -32,18 +34,20 @@ struct ErrorView: View {
                 
                 
                 Button(action: {
-                    
+                    self.alert.toggle()
                 })
                 {
-                    Text("Cancel")
+                    Text("Ok !")
                         .foregroundColor(.white)
                         .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 120)
+                        .frame(width: UIScreen.main.bounds.width - 160)
                 }
-                .background(Color("Color"))
+                .background(Color(couleur))
                 .cornerRadius(10)
                 .padding(.top, 20)
+                .padding(.bottom, 20)
             }
+            .padding(.vertical, 25)
             .frame(width: UIScreen.main.bounds.width - 70)
             .background(Color.white)
             .cornerRadius(15)
@@ -54,8 +58,8 @@ struct ErrorView: View {
     }
 }
 
-struct ErrorView_Previews: PreviewProvider {
+struct AlertView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(alert: Binding.constant(true), error: Binding.constant(""))
+        AlertView(alert: Binding.constant(true), error: Binding.constant(""),type: Binding.constant("Test"),couleur: Binding.constant("a7mer"))
     }
 }

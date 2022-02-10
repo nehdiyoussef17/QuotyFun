@@ -19,12 +19,15 @@ struct LoginView : View {
     @Binding var show : Bool
     @State var alert = false
     @State var error = ""
+    @State var type = ""
+    @State var couleur = ""
     
     
     
     
     var body: some View{
-        ZStack(alignment: .topTrailing){
+        ZStack{
+            ZStack(alignment: .topTrailing){
             GeometryReader{_ in
                 
                 VStack{
@@ -64,7 +67,7 @@ struct LoginView : View {
                         .padding(.top, 25)
                     
                     Button(action: {
-                        
+                        self.verify()
                     }){
                         Text("Log in")
                             .foregroundColor(.white)
@@ -98,6 +101,40 @@ struct LoginView : View {
             }
             .padding()
         }
+            
+            if self.alert {
+                AlertView(alert: self.$alert, error: self.$error, type: self.$type,couleur : self.$couleur)
+            }
+        }
+    }
+    
+    func verify(){
+        if self.email != "" && self.pass != "" {
+            self.error = "Welcome"
+            self.type = "Success"
+            self.alert.toggle()
+            self.couleur = "a5dher"
+            
+        }
+        else {
+            self.error = "Please fill all fields properly"
+            self.type = "Error"
+            self.alert.toggle()
+            self.couleur = "a7mer"
+        }
     }
 }
 
+
+
+
+
+
+
+
+
+struct Login_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(show : Binding.constant(true))
+    }
+}
