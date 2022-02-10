@@ -15,6 +15,7 @@
 		66A5819727B3F41100E3C951 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819627B3F41100E3C951 /* LoginView.swift */; };
 		66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819827B40BBD00E3C951 /* SignUpView.swift */; };
 		66A5819B27B4222100E3C951 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819A27B4222100E3C951 /* AlertView.swift */; };
+		66AAAF4A27B521F500956D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66AAAF4927B521F500956D8A /* GoogleService-Info.plist */; };
 		73BD09B827DDB32520977893 /* Pods_QuotyFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B55E69520F978E132CF9A0C /* Pods_QuotyFun.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		66A5819627B3F41100E3C951 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66A5819827B40BBD00E3C951 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		66A5819A27B4222100E3C951 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		66AAAF4927B521F500956D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B55E69520F978E132CF9A0C /* Pods_QuotyFun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuotyFun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 		66A5818127B3CEEB00E3C951 /* QuotyFun */ = {
 			isa = PBXGroup;
 			children = (
+				66AAAF4927B521F500956D8A /* GoogleService-Info.plist */,
 				66A5819327B3DCB100E3C951 /* Utils */,
 				66A5819227B3DCA800E3C951 /* ViewModel */,
 				66A5819127B3DCA200E3C951 /* Model */,
@@ -197,6 +200,7 @@
 			files = (
 				66A5818A27B3CEF100E3C951 /* Preview Assets.xcassets in Resources */,
 				66A5818727B3CEF100E3C951 /* Assets.xcassets in Resources */,
+				66AAAF4A27B521F500956D8A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 
 
 
@@ -110,10 +111,22 @@ struct LoginView : View {
     
     func verify(){
         if self.email != "" && self.pass != "" {
-            self.error = "Welcome"
-            self.type = "Success"
-            self.alert.toggle()
-            self.couleur = "a5dher"
+            Auth.auth().signIn(withEmail: self.email, password: self.pass) { (res,err) in
+                if err != nil{
+                    self.error = err!.localizedDescription
+                    self.alert.toggle()
+                }
+                else{
+                self.error = "Welcome"
+                self.type = "Success"
+                self.alert.toggle()
+                self.couleur = "a5dher"
+                    
+                }
+            }
+            
+            
+            
             
         }
         else {
