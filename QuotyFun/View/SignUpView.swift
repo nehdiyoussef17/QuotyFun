@@ -17,10 +17,8 @@ struct SignUpView : View {
     @State var visible = false
     @State var revisible = false
     @Binding var show : Bool
-    @State var alert = false
     @State var error = ""
-    @State var type = ""
-    @State var couleur = ""
+    @State var type : AlertViewType?
 
     
     
@@ -126,8 +124,8 @@ struct SignUpView : View {
                 
             }
             
-            if self.alert{
-                AlertView(alert: self.$alert, error: self.$error, type: self.$type, couleur: self.$couleur)
+            if type != nil {
+                AlertView( error: self.error, type: $type)
             }
             
             
@@ -144,31 +142,28 @@ struct SignUpView : View {
                     
                     if err != nil{
                         self.error=err!.localizedDescription
-                        self.alert.toggle()
-                        self.type = "Error🛑"
-                        self.couleur = "a7mer"
+                        self.type = .Error
+                        
                         return
                     }
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                     self.error = "Welcome"
-                    self.type = "Success✅"
-                    self.alert.toggle()
-                    self.couleur = "a5dher"
+                    self.type = .Success
+                    
+                   
                 }
             }
             else{
                 self.error = "Password mismatch"
-                self.type = "Warning⚠️"
-                self.couleur = "asfer"
-                self.alert.toggle()
+                self.type = .Warning
+                
             }
         }
         else{
             self.error = "Please fill all the content properly"
-            self.type = "Error🛑"
-            self.couleur = "a7mer"
-            self.alert.toggle()
+            self.type = .Error
+           
         }
         
     }

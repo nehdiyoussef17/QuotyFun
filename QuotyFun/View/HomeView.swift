@@ -17,7 +17,6 @@ struct HomeView : View {
     var body: some View{
         NavigationView{
             VStack{
-                
                 if self.status{
                     ContentView()
                 }

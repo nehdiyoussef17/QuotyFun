@@ -7,18 +7,61 @@
 
 import SwiftUI
 
+
+enum AlertViewType
+{
+    
+    case Warning
+    case Error
+    case Success
+        
+}
+
 struct AlertView: View {
+    
     @State var color = Color.black.opacity(0.7)
-    @Binding var alert : Bool
-    @Binding var error : String
-    @Binding var type : String
-    @Binding var couleur : String
+    var error : String
+    @Binding var type : AlertViewType?
+     
+    func getBackgroudColor() -> Color
+    {
+        switch self.type
+        {
+        case .Warning:
+            return Color("asfer")
+        case .Error:
+            return Color("a7mer")
+        case .Success:
+            return Color("a5dher")
+        case .none:
+            return Color("a5dher")
+        }
+        
+    }
+    
+    
+    func getTitle()->String
+    {
+        switch self.type
+        {
+        case .Warning:
+            return "Warning"
+        
+        case .Error:
+            return "Error"
+        
+        case .Success:
+            return "Success"
+        case .none:
+            return "Error"
+        }
+    }
     
     var body: some View {
         GeometryReader{_ in
             VStack{
                 HStack{
-                    Text(type)
+                    Text(getTitle())
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(self.color)
@@ -34,7 +77,9 @@ struct AlertView: View {
                 
                 
                 Button(action: {
-                    self.alert.toggle()
+                    
+                    self.type = nil
+                    
                 })
                 {
                     Text("Ok !")
@@ -42,7 +87,7 @@ struct AlertView: View {
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 160)
                 }
-                .background(Color(couleur))
+                .background(getBackgroudColor())
                 .cornerRadius(10)
                 .padding(.top, 20)
                 .padding(.bottom, 20)
@@ -58,8 +103,3 @@ struct AlertView: View {
     }
 }
 
-struct AlertView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlertView(alert: Binding.constant(true), error: Binding.constant(""),type: Binding.constant("Test"),couleur: Binding.constant("a7mer"))
-    }
-}
