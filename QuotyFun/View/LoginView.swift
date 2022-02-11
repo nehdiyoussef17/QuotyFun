@@ -114,28 +114,27 @@ struct LoginView : View {
         }
     }
     
-    func verify(){
+    func verify()
+    {
         if self.email != "" && self.pass != "" {
             Auth.auth().signIn(withEmail: self.email, password: self.pass) { (res,err) in
                 if err != nil{
                     self.error = err!.localizedDescription
+                    self.type = .Error
                     return
                 }
                 else{
                 UserDefaults.standard.set(true, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                 self.error = "Welcome"
+                    self.type = .Success
              
-                    
                 }
             }
-            
-            
-            
-            
         }
         else {
             self.error = "Please fill all fields properly"
+            self.type = .Error
          
         }
     }
