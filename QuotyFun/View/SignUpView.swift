@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import Firebase
+import ConfettiSwiftUI
+
 
 struct SignUpView : View {
     @State var color = Color.black.opacity(0.7)
@@ -19,10 +21,14 @@ struct SignUpView : View {
     @Binding var show : Bool
     @State var error = ""
     @State var type : AlertViewType?
+    
+    
+    @State var counter:Int = 0
 
     
     
     var body: some View{
+        
         
         ZStack{
             ZStack(alignment: .topLeading){
@@ -102,6 +108,8 @@ struct SignUpView : View {
                                 .foregroundColor(.white)
                                 .padding(.vertical)
                                 .frame(width: UIScreen.main.bounds.width - 50)
+                                .onTapGesture(){counter = 1}
+                                            ConfettiCannon(counter: $counter)
                         }
                         .background(Color("Color"))
                         .cornerRadius(10)

@@ -13,7 +13,10 @@ import FirebaseAuth
 
 
 
+
 struct LoginView : View {
+
+    
     @State var color = Color.black.opacity(0.7)
     @State var email = ""
     @State var pass = ""

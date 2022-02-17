@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6614379227B6C37A00FFEA3F /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6614379127B6C37A00FFEA3F /* ConfettiSwiftUI */; };
 		66A5818327B3CEEB00E3C951 /* QuotyFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5818227B3CEEB00E3C951 /* QuotyFunApp.swift */; };
 		66A5818527B3CEEB00E3C951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5818427B3CEEB00E3C951 /* ContentView.swift */; };
 		66A5818727B3CEF100E3C951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A5818627B3CEF100E3C951 /* Assets.xcassets */; };
@@ -15,13 +16,23 @@
 		66A5819727B3F41100E3C951 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819627B3F41100E3C951 /* LoginView.swift */; };
 		66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819827B40BBD00E3C951 /* SignUpView.swift */; };
 		66A5819B27B4222100E3C951 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5819A27B4222100E3C951 /* AlertView.swift */; };
+		66A7821927BAB98600D957FA /* swipeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A7821827BAB98600D957FA /* swipeGesture.swift */; };
 		66AAAF4A27B521F500956D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66AAAF4927B521F500956D8A /* GoogleService-Info.plist */; };
+		66ACC38427BCEAE000777FD7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66ACC38327BCEA9B00777FD7 /* CaviarDreams.ttf */; };
+		66ACC38627BCEFBD00777FD7 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66ACC38527BCEFBD00777FD7 /* CaviarDreams_Bold.ttf */; };
+		66ACC38827BCF0C900777FD7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ACC38727BCF0C900777FD7 /* TestView.swift */; };
+		66ACC38C27BD3F9600777FD7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ACC38B27BD3F9600777FD7 /* WebView.swift */; };
+		66BB2AD127BD567D007CDA6D /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB2AD027BD567D007CDA6D /* AuthorView.swift */; };
+		66CFC56C27BA4A6F00913393 /* QuotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC56B27BA4A6F00913393 /* QuotesService.swift */; };
+		66CFC56E27BA4F8600913393 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC56D27BA4F8600913393 /* Quote.swift */; };
+		66CFC57027BA538400913393 /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC56F27BA538400913393 /* QuoteViewModel.swift */; };
 		BB659E134BCBBF63DD10A352 /* Pods_QuotyFun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6AC6268CDBC8A6C8A3B652 /* Pods_QuotyFun.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B3E0FCCD399AE873F5BE948 /* Pods-QuotyFun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuotyFun.debug.xcconfig"; path = "Target Support Files/Pods-QuotyFun/Pods-QuotyFun.debug.xcconfig"; sourceTree = "<group>"; };
 		3E6AC6268CDBC8A6C8A3B652 /* Pods_QuotyFun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuotyFun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6614376D27B6AF2A00FFEA3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		66A5817F27B3CEEB00E3C951 /* QuotyFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotyFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A5818227B3CEEB00E3C951 /* QuotyFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotyFunApp.swift; sourceTree = "<group>"; };
 		66A5818427B3CEEB00E3C951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,7 +42,16 @@
 		66A5819627B3F41100E3C951 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66A5819827B40BBD00E3C951 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		66A5819A27B4222100E3C951 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		66A7821827BAB98600D957FA /* swipeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipeGesture.swift; sourceTree = "<group>"; };
 		66AAAF4927B521F500956D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		66ACC38327BCEA9B00777FD7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		66ACC38527BCEFBD00777FD7 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		66ACC38727BCF0C900777FD7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		66ACC38B27BD3F9600777FD7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		66BB2AD027BD567D007CDA6D /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
+		66CFC56B27BA4A6F00913393 /* QuotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesService.swift; sourceTree = "<group>"; };
+		66CFC56D27BA4F8600913393 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		66CFC56F27BA538400913393 /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
 		D263DB7FE23183532B9925C7 /* Pods-QuotyFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuotyFun.release.xcconfig"; path = "Target Support Files/Pods-QuotyFun/Pods-QuotyFun.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6614379227B6C37A00FFEA3F /* ConfettiSwiftUI in Frameworks */,
 				BB659E134BCBBF63DD10A352 /* Pods_QuotyFun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +89,8 @@
 		66A5818127B3CEEB00E3C951 /* QuotyFun */ = {
 			isa = PBXGroup;
 			children = (
+				66CFC56A27BA461E00913393 /* Services */,
+				6614376D27B6AF2A00FFEA3F /* Info.plist */,
 				66AAAF4927B521F500956D8A /* GoogleService-Info.plist */,
 				66A5819327B3DCB100E3C951 /* Utils */,
 				66A5819227B3DCA800E3C951 /* ViewModel */,
@@ -96,6 +119,8 @@
 				66A5819627B3F41100E3C951 /* LoginView.swift */,
 				66A5819827B40BBD00E3C951 /* SignUpView.swift */,
 				66A5819A27B4222100E3C951 /* AlertView.swift */,
+				66ACC38727BCF0C900777FD7 /* TestView.swift */,
+				66BB2AD027BD567D007CDA6D /* AuthorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +128,7 @@
 		66A5819127B3DCA200E3C951 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66CFC56D27BA4F8600913393 /* Quote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +136,7 @@
 		66A5819227B3DCA800E3C951 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				66CFC56F27BA538400913393 /* QuoteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,8 +144,20 @@
 		66A5819327B3DCB100E3C951 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				66ACC38327BCEA9B00777FD7 /* CaviarDreams.ttf */,
+				66ACC38527BCEFBD00777FD7 /* CaviarDreams_Bold.ttf */,
+				66A7821827BAB98600D957FA /* swipeGesture.swift */,
+				66ACC38B27BD3F9600777FD7 /* WebView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		66CFC56A27BA461E00913393 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				66CFC56B27BA4A6F00913393 /* QuotesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		73BF9EAA389F6496D8FE17B3 /* Frameworks */ = {
@@ -156,6 +195,9 @@
 			dependencies = (
 			);
 			name = QuotyFun;
+			packageProductDependencies = (
+				6614379127B6C37A00FFEA3F /* ConfettiSwiftUI */,
+			);
 			productName = QuotyFun;
 			productReference = 66A5817F27B3CEEB00E3C951 /* QuotyFun.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 66A5817627B3CEEB00E3C951;
+			packageReferences = (
+				6614379027B6C37A00FFEA3F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 66A5818027B3CEEB00E3C951 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +245,8 @@
 			files = (
 				66A5818A27B3CEF100E3C951 /* Preview Assets.xcassets in Resources */,
 				66A5818727B3CEF100E3C951 /* Assets.xcassets in Resources */,
+				66ACC38627BCEFBD00777FD7 /* CaviarDreams_Bold.ttf in Resources */,
+				66ACC38427BCEAE000777FD7 /* CaviarDreams.ttf in Resources */,
 				66AAAF4A27B521F500956D8A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,11 +300,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CFC57027BA538400913393 /* QuoteViewModel.swift in Sources */,
 				66A5819527B3F33F00E3C951 /* HomeView.swift in Sources */,
+				66ACC38827BCF0C900777FD7 /* TestView.swift in Sources */,
+				66CFC56C27BA4A6F00913393 /* QuotesService.swift in Sources */,
+				66BB2AD127BD567D007CDA6D /* AuthorView.swift in Sources */,
 				66A5819B27B4222100E3C951 /* AlertView.swift in Sources */,
 				66A5819927B40BBD00E3C951 /* SignUpView.swift in Sources */,
+				66CFC56E27BA4F8600913393 /* Quote.swift in Sources */,
 				66A5818527B3CEEB00E3C951 /* ContentView.swift in Sources */,
 				66A5819727B3F41100E3C951 /* LoginView.swift in Sources */,
+				66ACC38C27BD3F9600777FD7 /* WebView.swift in Sources */,
+				66A7821927BAB98600D957FA /* swipeGesture.swift in Sources */,
 				66A5818327B3CEEB00E3C951 /* QuotyFunApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +447,7 @@
 				DEVELOPMENT_TEAM = PSLD6XXNMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuotyFun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -423,6 +478,7 @@
 				DEVELOPMENT_TEAM = PSLD6XXNMC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuotyFun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +519,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6614379027B6C37A00FFEA3F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6614379127B6C37A00FFEA3F /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6614379027B6C37A00FFEA3F /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66A5817727B3CEEB00E3C951 /* Project object */;
 }

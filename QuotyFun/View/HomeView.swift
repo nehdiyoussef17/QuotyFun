@@ -10,7 +10,6 @@ import SwiftUI
 
 
 
-
 struct HomeView : View {
     @State var show = false
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
@@ -18,7 +17,7 @@ struct HomeView : View {
         NavigationView{
             VStack{
                 if self.status{
-                    ContentView()
+                    ContentView(quoteViewModel: QuoteViewModel(quoteService: QuotesService()))
                 }
                 else{
                     ZStack{
@@ -48,3 +47,14 @@ struct Home_Previews: PreviewProvider {
         HomeView()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
